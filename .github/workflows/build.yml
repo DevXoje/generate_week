@@ -13,18 +13,18 @@ jobs:
       - name: Install Python
         uses: actions/setup-python@v1
         with:
-          python-version: '3.7'
-          architecture: 'x64'
+          python-version: "3.7"
+          architecture: "x64"
       - name: Install requirements
         run: |
           pip install -r requirements.txt
       - name: Run PyInstaller
         run: |
-          python -m PyInstaller qwiklab_badge_checker.spec
+          python -m PyInstaller main.spec
       - uses: actions/upload-artifact@v2
         with:
           name: Windows_qwiklabs
-          path: dist/qwiklab_badge_checker.exe
+          path: dist/generate_week.exe
 
       - name: create release
         id: create_release
@@ -46,6 +46,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{steps.create_release.outputs.upload_url}}
-          asset_path: dist/qwiklab_badge_checker.exe
-          asset_name: Qwiklab-Badge-Checker-Windows-amd64.exe
+          asset_path: dist/generate_week.exe
+          asset_name: Generate-Week-Windows-amd64.exe
           asset_content_type: application/zip
