@@ -1,4 +1,3 @@
 openpyxl
-posixpath
 os
 genericpath
