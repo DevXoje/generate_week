@@ -43,7 +43,7 @@ class Sheet:
         # Save the file
         if not exists(path_to_file):
             self.workbook.save(file_relative_path)
-            expanduser(folder_path+"\\"+file_relative_path)
+            # expanduser(folder_path+"\\"+file_relative_path)
             print("created file : ", file_name)
         else:
             print("file exists")
