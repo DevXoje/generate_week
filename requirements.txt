@@ -1,2 +1,1 @@
-openpyxl
-genericpath
+openpyxl 3.0.10
