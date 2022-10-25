@@ -1,4 +1,5 @@
-/__pycache__
-/.vscode
-/dist
-/build
+__pycache__
+.vscode
+dist
+build
+main.spec
