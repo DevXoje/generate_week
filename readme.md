@@ -1,6 +1,6 @@
 # To do
 
-![example workflow](https://github.com/DevXoje/generate_week/actions/workflows/build.yml/badge.svg)
+[![Build](https://github.com/DevXoje/generate_week/actions/workflows/build.yml/badge.svg)](https://github.com/DevXoje/generate_week/actions/workflows/build.yml)
 
 - Styles
 - Compile to exe

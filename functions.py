@@ -43,11 +43,17 @@ def getWeek() -> int:
 def getDaysOfWeek(n_week) -> list[str]:
 
     WEEK = n_week - 1  # as it starts with 0 and you want week to start from sunday
+
     startdate = time.asctime(time.strptime('2022 %d 0' % WEEK, '%Y %W %w'))
+    print(startdate)
     startdate = datetime.strptime(startdate, '%a %b %d %H:%M:%S %Y')
-    dates = [startdate.strftime('%d/%m/%Y')]
-    for i in range(1, 7):
+    print(startdate)
+    initial_date = startdate.strftime('%d/%m/%Y')
+    print(initial_date)
+    dates = [initial_date]
+    for i in range(0, 6):
         day = startdate + timedelta(days=i)
+        print(day)
         dates.append(day.strftime('%d/%m/%Y'))
 
     return dates

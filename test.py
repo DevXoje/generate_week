@@ -1,3 +1,7 @@
+from functions import getDaysOfWeek
 
 
-print(3 in range(1, 53))
+n_week = 43
+days = getDaysOfWeek(n_week)
+
+print(days)
