@@ -28,3 +28,5 @@ jobs:
         with:
           name: Windows_weekGenerator
           path: dist/generate_week.exe
+      - name: List items
+        run: ls -R 
