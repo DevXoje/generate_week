@@ -20,9 +20,13 @@ jobs:
       - name: Install requirements
         run: |
           pip install -r requirements.txt
+
       - name: Run PyInstaller
         run: |
           python -m PyInstaller main.spec
+      - name: Copy resources
+        run: |
+          cp -R res dist/res
       - name: Upload with build
         uses: actions/upload-artifact@v3
         with:
